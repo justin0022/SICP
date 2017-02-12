@@ -73,6 +73,7 @@ f
 |#
 
 ;;; 1.8
+#|
 (define (cbrt x) (cbrt-iter 1.0 x))
 
 (define (cbrt-iter guess x)
@@ -92,5 +93,16 @@ f
      3))
 
 (cbrt 27)
-         
+|#
+
+;;; 1.9
+(define (+ a b)
+  (if (= a 0) b (inc (+ (dec a) b))))
+(define (+ a b)
+  (if (= a 0) b (+ (dec a) (inc b))))
+
+; first is recursive, because the function is called again while being nestered
+; second is iterative, because the function is called again without nesting.
+;; sounds like tail recursion to me...
+
 (test)
