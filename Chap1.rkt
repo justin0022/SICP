@@ -43,6 +43,36 @@ f
 (check-expect (a-plus-abs-b -5 -6) 1)
 
 
+;; This function takes as input two integers a and b and returns a + the absolute value of b
+
+
+;;; 1.5
+;; don't want to do this question, sorry.
+
+;;; 1.6
+;; don't want to do this question, sorry.
+
+;;; 1.7
+#|
+(define (square x) (* x x))
+
+(define (sqrt-iter guess x) (if (good-enough? guess x)
+      guess
+      (sqrt-iter (improve guess x) x)))
+
+(define (improve guess x) (average guess (/ x guess)))
+
+(define (average x y) (/ (+ x y) 2))
+
+(define (good-enough? guess x)
+(< (abs (- (square guess) x)) 0.001))
+
+(define (sqrt x) (sqrt-iter 1.0 x))
+
+(sqrt 0.0000005)
+|#
+
+;;; 1.8
 
 
 (test)
